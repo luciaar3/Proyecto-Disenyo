@@ -1,14 +1,18 @@
-@use 'styles/variables';
-@use 'styles/typography';
-@use 'mixins/buttons';
-@use 'mixins/tables';
-@use 'mixins/functions';
-@use 'layout/header';
-@use 'layout/footer';
-@use 'layout/banner';
-@use 'components/buttons';
-@use 'components/player-card';
-@use 'components/news-card';
-@use 'components/results-table';
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
 
 /*# sourceMappingURL=main.css.map */
