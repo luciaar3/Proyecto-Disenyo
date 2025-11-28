@@ -1,0 +1,20 @@
+//variables globales
+@use 'styles/variables';
+// tipografia
+@use 'styles/typography';
+
+// mixins y funciones
+@use 'mixins/buttons';
+@use 'mixins/tables';
+@use 'mixins/functions';
+
+// layout
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/banner';
+
+// componentes
+@use 'components/buttons';
+@use 'components/player-card';
+@use 'components/news-card';
+@use 'components/results-table';
