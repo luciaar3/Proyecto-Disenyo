@@ -1,18 +1,23 @@
 //variables globales
-@use 'constants/variables';
-// tipografia
-@use 'constants/typography';
+@use 'constants/variables' as *;
+
+// fuentes
+@use 'constants/fonts';
+
+// cambios globales
+@use 'base/base';
 
 // mixins y funciones
 @use 'mixins/buttons' as buttonsMixins;
 @use 'mixins/tables';
 @use 'mixins/functions';
+@use 'mixins/text';
+@use 'mixins/links';
 
 // layout
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/banner';
-@use 'layout/body';
 
 // componentes
 @use 'components/buttons' as buttonsComponents;

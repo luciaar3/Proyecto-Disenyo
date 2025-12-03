@@ -1,0 +1,117 @@
+@use '../constants/variables' as *;
+@use '../mixins/text' as *;
+@use '../mixins/functions' as *;
+@use '../mixins/buttons' as *;
+@use '../mixins/links' as *;
+
+footer {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    max-height: 600px;
+
+    .row {
+        @include flex;
+        width: 100%;
+        
+        .container-relative-info {
+            background-image: url('../../assets/imgs/prism.png');
+            background-position: center center;
+            background-repeat: repeat;
+            padding: $padding;
+
+            @include flex-center;
+            gap: 10%;
+            width: 66.6666667%;
+
+            .contact-form {
+                @include flex;
+                flex-direction: column;
+                gap: 15px;
+
+                form {
+                    @include flex-justify-center;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    input[type="text"],
+                    textarea {
+                        font-size: 1rem;
+                        border: 0;
+                        padding-left: 5px;
+                    }
+
+                    input[type="text"] {
+                        height: 50px;
+                    }
+
+                    textarea {
+                        height: 8rem;
+                    }
+
+                    input[type="submit"] {
+                        @include primary-button;
+                    }
+                }
+
+            }
+
+            .conatiner-links {
+                @include flex;
+                flex-direction: column;
+                gap: 15px;
+                height: 100%;
+            }
+
+            hr {
+                width: 80%;
+                margin: 0;
+            }
+
+            .title,
+            p {
+                @include text-light;
+            }
+
+            a {
+                @include link;
+            }
+        }
+
+        .conatiner-contact-us {
+            background-image: url('../../assets/imgs/img-footer.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 33.333333%;
+            height: 100%;
+        }
+
+    }
+
+    .container-copyright {
+        @include flex-center;
+        background-color: $color-dark;
+        width: 100%;
+        height: min-content;
+        padding: 5px 20px;
+
+        .container-sized{
+            @include flex-center;
+            width: 100%;
+            max-width: $container-sized;
+            .copyright {
+                @include text-light;
+                height: 100%;
+                width: 66.666667%;
+                max-width: $container-sized;
+            }
+
+            .conatiner-icons {
+                @include flex-center;
+                gap: 10px;
+                width: 33.333333%;
+            }
+            }
+    }
+}

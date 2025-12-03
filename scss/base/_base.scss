@@ -1,0 +1,25 @@
+@use '../constants/variables' as *;
+
+*{
+    box-sizing: border-box;
+    font-family: $font-text;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    background-color: $color-light;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-title;
+    margin: 0px;
+}

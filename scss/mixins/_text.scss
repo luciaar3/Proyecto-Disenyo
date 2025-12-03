@@ -1,0 +1,5 @@
+@use '../constants/variables' as *;
+
+@mixin text-light {
+  color: $color-light;
+}

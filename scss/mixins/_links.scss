@@ -1,0 +1,7 @@
+
+@use '../mixins/text' as *;
+
+@mixin link{
+    @include text-light;
+    text-decoration: none;
+}
