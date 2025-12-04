@@ -1,0 +1,29 @@
+@use "../constants/variables" as vars;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  nav {
+    display: flex;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 6em;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: vars.$text-color-white;
+        font-size: 1em;
+      }
+    }
+  }
+  h2 {
+    display: flex;
+    color: vars.$text-color-black;
+    font-size: 2em;
+  }
+
+}
+//div clip path
