@@ -63,11 +63,6 @@ footer {
                 height: 100%;
             }
 
-            hr {
-                width: 80%;
-                margin: 0;
-            }
-
             .title,
             p {
                 @include text-light;
@@ -85,6 +80,34 @@ footer {
             background-size: cover;
             width: 33.333333%;
             height: 100%;
+            @include text-light;
+            
+            @include flex-center;
+            flex-direction: column;
+
+   
+
+            .container-title{
+                @include flex-center;
+                flex-direction: column;
+                width: fit-content;
+                gap: 5px;
+
+                h4{
+                    font-size: 1.75rem;
+                }
+            }
+
+            .container-info{
+                @include flex-center;
+                flex-direction: column;
+                width: 100%;
+
+                .row{
+                    @include flex;
+                    width: 80%;
+                }
+            }
         }
 
     }

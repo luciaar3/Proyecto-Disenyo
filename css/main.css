@@ -113,6 +113,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 
+hr {
+  width: 100%;
+  margin: 0;
+  border-color: #D90416;
+  border-width: 2px;
+  border-style: solid;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -175,10 +183,6 @@ footer .row .container-relative-info .conatiner-links {
   gap: 15px;
   height: 100%;
 }
-footer .row .container-relative-info hr {
-  width: 80%;
-  margin: 0;
-}
 footer .row .container-relative-info .title,
 footer .row .container-relative-info p {
   color: white;
@@ -194,6 +198,33 @@ footer .row .conatiner-contact-us {
   background-size: cover;
   width: 33.333333%;
   height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .row .conatiner-contact-us .container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  gap: 5px;
+}
+footer .row .conatiner-contact-us .container-title h4 {
+  font-size: 1.75rem;
+}
+footer .row .conatiner-contact-us .container-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+footer .row .conatiner-contact-us .container-info .row {
+  display: flex;
+  width: 80%;
 }
 footer .container-copyright {
   display: flex;

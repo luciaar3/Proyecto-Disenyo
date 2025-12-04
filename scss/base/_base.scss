@@ -23,3 +23,11 @@ h1, h2, h3, h4, h5, h6{
     font-family: $font-title;
     margin: 0px;
 }
+
+hr {
+    width: 100%;
+    margin: 0;
+    border-color: $color-primary;
+    border-width: 2px;
+    border-style: solid;
+}
