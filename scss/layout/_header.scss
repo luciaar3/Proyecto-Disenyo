@@ -1,29 +1,90 @@
 @use "../constants/variables" as vars;
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  nav {
-    display: flex;
-
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 6em;
-      text-decoration: none;
-      a {
-        text-decoration: none;
-        color: vars.$text-color-white;
-        font-size: 1em;
-      }
-    }
-  }
-  h2 {
-    display: flex;
-    color: vars.$text-color-black;
-    font-size: 2em;
-  }
-
+  position: relative; /* importante para overlay y z-index */
+  /* fondo de la imagen */
+  background-image: url("../imgs/home-estadio-fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 130vh;
 }
+
+#top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#top > nav,
+#top > h2 {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+#top .below {
+  flex: 0 0 100%;
+  margin-top: 8px;
+  text-align: center;
+}
+
+#top nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-left: 1.5em;
+}
+
+#top nav a {
+  position: relative;
+  text-decoration: none;
+  color: vars.$text-color-white;
+  font-size: 1.3em;
+   z-index: 3;
+}
+#top h2 {
+  position: relative;
+  color: vars.$text-color-black;
+  font-size: 2.5em;
+   z-index: 3;
+}
+
+h3 {
+  position: relative;
+  font-size: 4em;
+  color: vars.$text-color-white;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+   z-index: 3;
+}
+h4 {
+  position: relative;
+  font-size: 2em;
+  color: vars.$text-color-white;
+  margin-top: 0;
+  margin-left: 3em;
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+
+  clip-path: polygon(
+    0% 0,
+    55% 0,/* arriba, empieza más a la derecha en la izquierda */ 
+    45% 100%,/* arriba, más a la izquierda en la derecha */
+    0 100% /* abajo, extremo derecho */ /* abajo, extremo izquierdo */
+  );
+}
+
 //div clip path
