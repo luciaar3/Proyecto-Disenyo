@@ -1,18 +1,99 @@
+.btn {
+  display: inline-block;
+  background-color: #D90416;
+  color: #ffffff;
+  padding: 0.8rem 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease; }
+  .btn:hover {
+    opacity: 0.8; }
+
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   display: grid;
   min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-}
+  grid-template-rows: auto 1fr auto; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Solway", serif;
+  background-color: #f0f0f0;
+  color: #000000; }
+
+.banner-medio {
+  position: relative;
+  width: 100%;
+  height: 63vh;
+  background-image: url("/img/banner-medio.jpg");
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .banner-medio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1; }
+  .banner-medio .banner-medio-texto {
+    position: relative;
+    font-family: "Arimo Hebrew Subset Italic", sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    max-width: 800px;
+    z-index: 2; }
+
+.ultima-noticia {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center; }
+  .ultima-noticia .ultima-noticia-titulo {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2rem; }
+  .ultima-noticia .noticia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    gap: 0.3rem;
+    align-items: stretch; }
+    .ultima-noticia .noticia .noticia-texto {
+      text-align: left;
+      padding: 1rem; }
+      .ultima-noticia .noticia .noticia-texto p {
+        font-family: "Solway", serif;
+        line-height: 1.6;
+        margin-bottom: 1rem; }
+    .ultima-noticia .noticia .image-block {
+      width: 100%;
+      height: 100%; }
+    .ultima-noticia .noticia .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */

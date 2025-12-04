@@ -1,21 +1,116 @@
 //variables globales
-@use 'constants/variables';
-// tipografia
-@use 'constants/typography';
+@import 'constants/variables';
 
 // mixins y funciones
-@use 'mixins/buttons' as buttonsMixins;
-@use 'mixins/tables';
-@use 'mixins/functions';
+@import 'mixins/buttons';
+@import 'mixins/tables';
+@import 'mixins/functions';
 
 // layout
-@use 'layout/header';
-@use 'layout/footer';
-@use 'layout/banner';
-@use 'layout/body';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/banner';
+@import 'layout/body';
 
 // componentes
-@use 'components/buttons' as buttonsComponents;
-@use 'components/player-card';
-@use 'components/news-cards';
-@use 'components/results-table';
+@import 'components/buttons';
+@import 'components/player-card';
+@import 'components/news-cards';
+@import 'components/results-table';
+
+// GENERAL
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-body;
+  background-color: $color-body;
+  color: $color-text-main;
+}
+
+// Banner-medio
+
+.banner-medio {
+  position: relative;
+  width: 100%;
+  height: 63vh;
+  background-image: url('/img/banner-medio.jpg'); // imagen equipo
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:$color-semitransparente; // negro semitransparente
+    z-index: 1; // debajo del texto
+  }
+
+  .banner-medio-texto {
+    position: relative;
+    font-family: $font-hero;
+    font-size: 2.2rem;
+    color: $color-white;
+    padding: 1rem 2rem;
+    max-width: 800px;
+    z-index: 2;
+  }
+}
+
+// Noticia 4
+
+.ultima-noticia {
+  padding: $section-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+
+  .ultima-noticia-titulo {
+    font-family: $font-title;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text-main;
+    margin-bottom: 2rem;
+  }
+
+    .noticia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-white;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    gap: 0.3rem;
+    align-items: stretch;
+
+    .noticia-texto {
+      text-align: left;
+      padding: 1rem; 
+
+      p {
+        font-family: $font-body;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .image-block {
+    width: 100%;
+    height: 100%;// ocupa toda la altura de la tarjeta
+    }
+    .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
