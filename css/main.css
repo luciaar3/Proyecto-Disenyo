@@ -16,22 +16,51 @@ html, body {
   height: 100%; }
 
 * {
-  box-sizing: border-box; }
-
-body {
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto; }
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
   font-family: "Solway", serif;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   color: #000000; }
+
+.ultima-noticia {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center; }
+  .ultima-noticia .ultima-noticia-titulo {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 2rem; }
+  .ultima-noticia .noticia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.363);
+    gap: 0.3rem;
+    align-items: stretch; }
+    .ultima-noticia .noticia .noticia-texto {
+      text-align: left;
+      padding: 1rem; }
+      .ultima-noticia .noticia .noticia-texto p {
+        font-family: "Solway", serif;
+        line-height: 1.6;
+        margin-bottom: 1rem; }
+    .ultima-noticia .noticia .image-block {
+      width: 100%;
+      height: 100%; }
+    .ultima-noticia .noticia .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 .banner-medio {
   position: relative;
@@ -61,39 +90,5 @@ body {
     padding: 1rem 2rem;
     max-width: 800px;
     z-index: 2; }
-
-.ultima-noticia {
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  text-align: center; }
-  .ultima-noticia .ultima-noticia-titulo {
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 2rem; }
-  .ultima-noticia .noticia {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #ffffff;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    gap: 0.3rem;
-    align-items: stretch; }
-    .ultima-noticia .noticia .noticia-texto {
-      text-align: left;
-      padding: 1rem; }
-      .ultima-noticia .noticia .noticia-texto p {
-        font-family: "Solway", serif;
-        line-height: 1.6;
-        margin-bottom: 1rem; }
-    .ultima-noticia .noticia .image-block {
-      width: 100%;
-      height: 100%; }
-    .ultima-noticia .noticia .image-block img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */

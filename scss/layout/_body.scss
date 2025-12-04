@@ -7,6 +7,8 @@ html, body{
 }
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,4 +16,7 @@ body{
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
+    font-family: $font-body;
+    background-color: $color-white;
+    color: $color-text-main;
 }

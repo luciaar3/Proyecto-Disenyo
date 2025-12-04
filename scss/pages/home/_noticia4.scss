@@ -1,0 +1,47 @@
+@import '../../constants/variables';
+
+.ultima-noticia {
+  padding: $section-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+
+  .ultima-noticia-titulo {
+    font-family: $font-title;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text-main;
+    margin-bottom: 2rem;
+  }
+
+    .noticia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-white;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.363);
+    gap: 0.3rem;
+    align-items: stretch;
+
+    .noticia-texto {
+      text-align: left;
+      padding: 1rem; 
+
+      p {
+        font-family: $font-body;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .image-block {
+    width: 100%;
+    height: 100%;// ocupa toda la altura de la tarjeta
+    }
+    .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
