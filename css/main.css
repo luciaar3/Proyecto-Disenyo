@@ -1,13 +1,20 @@
 @charset "UTF-8";
 header {
-  position: relative; /* importante para overlay y z-index */
-  /* fondo de la imagen */
+  position: relative;
   background-image: url("../imgs/home-estadio-fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 130vh;
+}
+header .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+  clip-path: polygon(0% 0, 55% 0, 45% 100%, 0 100%);
 }
 
 #top {
@@ -19,46 +26,40 @@ header {
   flex-wrap: wrap;
   gap: 10px;
 }
-
 #top > nav,
 #top > h2 {
   flex: 0 1 auto;
   min-width: 0;
 }
-
 #top .below {
   flex: 0 0 100%;
   margin-top: 8px;
   text-align: center;
 }
-
 #top nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
+  gap: 2em;
+  margin: 0 0 0 1.5em;
   padding: 0;
-  margin-left: 1.5em;
 }
-
 #top nav a {
   position: relative;
   text-decoration: none;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.8em;
   z-index: 3;
 }
-
 #top h2 {
   position: relative;
-  color: black;
-  font-size: 2.5em;
+  color: white;
+  font-size: 3em;
   z-index: 3;
 }
 
 h3 {
   position: relative;
-  font-size: 4em;
+  font-size: 5em;
   color: white;
   margin-left: 1.5em;
   margin-bottom: 0.5em;
@@ -67,26 +68,23 @@ h3 {
 
 h4 {
   position: relative;
-  font-size: 2em;
+  font-size: 3em;
   color: white;
   margin-top: 0;
-  margin-left: 3em;
+  margin-left: 2.6em;
   z-index: 3;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-  clip-path: polygon(0% 0, 55% 0, 45% 100%, 0 100%);
-}
-
+/* ============================
+      📱 RESPONSIVE
+============================ */
 @media (max-width: 768px) {
   header {
     height: 100vh;
     background-position: center;
+  }
+  header .overlay {
+    clip-path: polygon(0% 0, 60% 0, 35% 100%, 0 100%);
   }
   #top {
     text-align: center;
@@ -111,9 +109,6 @@ h4 {
     font-size: 1.3em;
     margin-left: 0;
     text-align: center;
-  }
-  .overlay {
-    clip-path: polygon(0% 0, 60% 0, 35% 100%, 0 100%);
   }
 }
 html, body {
@@ -144,6 +139,32 @@ body {
   height: 100%;
   object-fit: cover; /* mantiene proporción */
   z-index: -1; /* envía detrás del contenido */
+}
+
+#encuentro {
+  display: flex;
+  height: 600px;
+  background-image: url("./../../imgs/Seccion-siguiente-partido.png");
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#encuentro #info {
+  color: white;
+  font-size: 1.8em;
+}
+#encuentro .escudo1 {
+  margin: 3em;
+}
+#encuentro .escudo1 .img1 {
+  width: 15em;
+}
+#encuentro .escudo2 {
+  margin: 5em;
+}
+#encuentro .escudo2 .img2 {
+  width: 12.5em;
+  padding-bottom: 3em;
 }
 
 /*# sourceMappingURL=main.css.map */
