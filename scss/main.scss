@@ -18,9 +18,15 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/banner';
+@use 'layout/body';
+
 
 // componentes
-@use 'components/buttons' as buttonsComponents;
+@use 'components/buttons';
 @use 'components/player-card';
 @use 'components/news-cards';
 @use 'components/results-table';
+
+//HOME
+@use 'pages/home/noticia4';
+@use 'pages/home/banner-medio';

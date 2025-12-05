@@ -176,6 +176,7 @@ footer .row .container-relative-info .contact-form form input[type=submit] {
   color: white;
   cursor: pointer;
   font-size: 1.25rem;
+  text-decoration: none;
 }
 footer .row .container-relative-info .conatiner-links {
   display: flex;
@@ -254,6 +255,110 @@ footer .container-copyright .container-sized .conatiner-icons {
   align-items: center;
   gap: 10px;
   width: 33.333333%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+  color: black;
+}
+
+.ultima-noticia {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.ultima-noticia .ultima-noticia-titulo {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 2rem;
+}
+.ultima-noticia .noticia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.363);
+  gap: 0.3rem;
+  align-items: stretch;
+}
+.ultima-noticia .noticia .noticia-texto {
+  text-align: left;
+  padding: 1rem;
+}
+.ultima-noticia .noticia .noticia-texto p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.ultima-noticia .noticia .noticia-texto a {
+  position: relative;
+  padding: 10px;
+  background-color: #D90416;
+  width: min-content;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.ultima-noticia .noticia .image-block {
+  width: 100%;
+  height: 100%;
+}
+.ultima-noticia .noticia .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-medio {
+  position: relative;
+  width: 100%;
+  height: 63vh;
+  background-image: url("/img/banner-medio.jpg");
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.banner-medio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.banner-medio .banner-medio-texto {
+  position: relative;
+  font-family: "Arimo Hebrew Subset Italic", sans-serif;
+  font-size: 2.2rem;
+  color: white;
+  padding: 1rem 2rem;
+  max-width: 800px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=main.css.map */
