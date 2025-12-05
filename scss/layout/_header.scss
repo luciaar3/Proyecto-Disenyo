@@ -87,4 +87,49 @@ h4 {
   );
 }
 
-//div clip path
+@media (max-width: 768px) {
+  header {
+    height: 100vh; // reduce altura para móviles
+    background-position: center;
+  }
+
+  #top {
+    text-align: center;
+  }
+
+  #top nav ul {
+    gap: 1.5rem;
+    margin-left: 0;
+  }
+
+  #top h2 {
+    font-size: 1.6em;
+  }
+
+  #top nav a {
+    font-size: 1em;
+  }
+
+  h3 {
+    margin-top: 3em;
+    font-size: 2em;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 1.3em;
+    margin-left: 0;
+    text-align: center;
+
+  }
+
+  .overlay {
+    clip-path: polygon(
+    0% 0,
+    60% 0,/* arriba, empieza más a la derecha en la izquierda */ 
+    35% 100%,/* arriba, más a la izquierda en la derecha */
+    0 100% /* abajo, extremo derecho */ /* abajo, extremo izquierdo */
+  );
+  }
+}
