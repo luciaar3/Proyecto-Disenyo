@@ -1,0 +1,24 @@
+#noticias {
+    display: flex; // Coloca los .noticia en línea
+    gap: 20px; // Espaciado entre ellos
+    justify-content: space-between; // Opcional: separarlos
+    padding: 20px;
+    height: auto;
+    width: 1200px;
+
+    .noticia {
+        width: 30%; // Para que entren tres por fila
+        background: #f5f5f5;
+        padding: 5px;
+        border-radius: 8px;
+        h6{
+            color: red;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+
+    }
+}
