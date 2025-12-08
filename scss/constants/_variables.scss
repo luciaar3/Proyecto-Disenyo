@@ -8,9 +8,11 @@ $color-primary: #D90416;
 $color-dark: black;
 $color-light: white;
 $color-semitransparente: rgba(0, 0, 0, .5);
+$color-text: rgba($color: $color-dark, $alpha: .6);
 
 $padding: 20px;
 $gap: 20px;
 $section-padding: 4rem 2rem;
 
 $box-shadow: 0 0 10px 4px rgba($color-dark, .2);
+$text-shadow: 0 0 5px rgba($color: $color-light, $alpha: .25);

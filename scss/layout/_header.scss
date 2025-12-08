@@ -92,6 +92,15 @@ header {
             font-weight: 300;
         }
 
+        span.shadow {
+            text-shadow: vars.$text-shadow;
+
+            span.text-red {
+                color: vars.$color-primary;
+            }
+
+        }
+
     }
 
 }
