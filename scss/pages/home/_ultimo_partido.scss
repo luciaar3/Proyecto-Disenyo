@@ -1,0 +1,66 @@
+@use '../../constants/variables' as *;
+@use '../../mixins/functions' as *;
+
+.last-game{
+    position: relative;
+    @include flex-center;
+    top: -100px;
+    z-index: 100;
+
+    .container-info{
+        position: relative;
+        height: 200px;
+        width: $container-sized;
+        background-color: $color-light;
+        box-shadow: $box-shadow;
+        @include flex-center;
+        flex-direction: column;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .container-teams{
+            @include flex-center;
+            flex-direction: row;
+            gap: $gap;
+            width: 100%;
+            height: 100px;
+
+            h3{
+                font-size: 2.25rem;
+                font-weight: 400;
+            }
+
+            img{
+                height: 100%;
+            }
+
+            .container-result{
+                position: relative;
+                @include flex;
+                flex-direction: row;
+
+                div{
+                    width: 100px;
+                    height: 75px;
+                    @include flex-center;
+                    font-size: 2.75rem;
+                    font-weight: 800;
+                    font-family: $font-title;
+                }
+
+                .result-loser{
+                    background-color: $color-primary;
+                    color: $color-dark;
+                }
+
+                .result-winner{
+                    background-color: $color-dark;
+                    color: $color-primary;
+                }
+            }
+        }
+    }   
+}

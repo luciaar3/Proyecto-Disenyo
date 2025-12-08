@@ -11,9 +11,10 @@
 @use 'layout/header';
 @use 'layout/footer';
 
-//HOME
+// HOME
 @use 'pages/home/noticia4';
 @use 'pages/home/banner-medio';
+@use 'pages/home/ultimo_partido';
 
-// pages
+// TEAM
 @use 'pages/team/encuentro' ;
