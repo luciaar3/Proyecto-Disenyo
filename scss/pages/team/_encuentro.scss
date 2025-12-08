@@ -1,0 +1,27 @@
+#encuentro {
+    display: flex;
+    height: 600px;
+    background-image: url("../../../assets/imgs/prism.png");
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    #info {
+        color: white;
+        font-size: 1.8em;
+    }
+
+    .escudo1 {
+        margin: 3em;
+        .img1{
+            width: 15em;
+        }
+    }
+    .escudo2 {
+        margin: 5em;
+        .img2 {
+            width: 12.5em;
+            padding-bottom:3em ;
+        }
+    }
+}
