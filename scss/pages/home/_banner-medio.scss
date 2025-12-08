@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 63vh;
-  background-image: url('/img/banner-medio.jpg'); // imagen equipo
+  background-image: url('../../../assets/imgs/banner-medio.jpg'); // imagen equipo
   background-size: cover;
   background-position: top;
   display: flex;
@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:$color-semitransparente; // negro semitransparente
+    background-color: $color-semitransparente; // negro semitransparente
     z-index: 1; // debajo del texto
   }
 
@@ -27,6 +27,7 @@
     position: relative;
     font-family: $font-hero;
     font-size: 2.2rem;
+    font-style: italic;
     color: $color-light;
     padding: 1rem 2rem;
     max-width: 800px;

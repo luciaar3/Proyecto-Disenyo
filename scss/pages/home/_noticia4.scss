@@ -1,51 +1,56 @@
 @use '../../constants/variables' as *;
 @use '../../mixins/buttons' as *;
+@use '../../mixins/functions' as *;
 
 .ultima-noticia {
-  padding: $section-padding;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  text-align: center;
+    padding: $section-padding;
+    @include flex-center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
 
-  .ultima-noticia-titulo {
-    font-family: $font-title;
-    font-size: 2rem;
-    font-weight: 600;
-    color: $color-dark;
-    margin-bottom: 2rem;
-  }
+    .ultima-noticia-titulo {
+        max-width: $container-sized;
+        font-family: $font-title;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-dark;
+        margin-bottom: 2rem;
+    }
 
     .noticia {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: $color-light;
-    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.363);
-    gap: 0.3rem;
-    align-items: stretch;
+        max-width: $container-sized;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $color-light;
+        box-shadow: $box-shadow;
+        align-items: stretch;
 
-    .noticia-texto {
-      text-align: left;
-      padding: 1rem; 
+        .noticia-texto {
+            @include flex;
+            flex-direction: column;
+            gap: $gap;
+            text-align: left;
+            padding: 1rem;
 
-      p {
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
+            p {
+                line-height: 1.6;
+            }
 
-      a{
-        @include primary-button;
-      }
+            a.btn {
+                @include primary-button;
+            }
+        }
+
+        .image-block {
+            width: 100%;
+            height: 100%; // ocupa toda la altura de la tarjeta
+        }
+
+        .image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
-
-    .image-block {
-    width: 100%;
-    height: 100%;// ocupa toda la altura de la tarjeta
-    }
-    .image-block img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
 }

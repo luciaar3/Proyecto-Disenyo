@@ -13,7 +13,7 @@ footer {
     .row {
         @include flex;
         width: 100%;
-        
+
         .container-relative-info {
             background-image: url('../../assets/imgs/prism.png');
             background-position: center center;
@@ -34,18 +34,19 @@ footer {
                     flex-direction: column;
                     gap: 15px;
 
-                    input[type="text"],
+                    input[type="email"],
                     textarea {
                         font-size: 1rem;
                         border: 0;
                         padding-left: 5px;
                     }
 
-                    input[type="text"] {
+                    input[type="email"] {
                         height: 50px;
                     }
 
                     textarea {
+                        padding-top: 5px;
                         height: 8rem;
                     }
 
@@ -74,37 +75,41 @@ footer {
         }
 
         .conatiner-contact-us {
-            background-image: url('../../assets/imgs/img-footer.png');
+
+            background-image:
+                linear-gradient($color-semitransparente, $color-semitransparente),
+                url('../../assets/imgs/img-footer.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             width: 33.333333%;
             height: 100%;
             @include text-light;
-            
+
             @include flex-center;
             flex-direction: column;
+            gap: $gap;
 
-   
-
-            .container-title{
+            .container-title {
                 @include flex-center;
                 flex-direction: column;
                 width: fit-content;
                 gap: 5px;
 
-                h4{
+                h4 {
                     font-size: 1.75rem;
                 }
             }
 
-            .container-info{
+            .container-info {
                 @include flex-center;
+                gap: $gap;
                 flex-direction: column;
                 width: 100%;
 
-                .row{
+                .row {
                     @include flex;
+                    gap: $gap;
                     width: 80%;
                 }
             }
@@ -119,10 +124,11 @@ footer {
         height: min-content;
         padding: 5px 20px;
 
-        .container-sized{
+        .container-sized {
             @include flex-center;
             width: 100%;
             max-width: $container-sized;
+
             .copyright {
                 @include text-light;
                 height: 100%;
@@ -134,7 +140,11 @@ footer {
                 @include flex-center;
                 gap: 10px;
                 width: 33.333333%;
+
+                a {
+                    @include flex-center;
+                }
             }
-            }
+        }
     }
 }
