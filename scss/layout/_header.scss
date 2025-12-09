@@ -1,4 +1,6 @@
 @use "../constants/variables" as vars;
+@use "../mixins/functions" as *;
+
 
 header {
     position: relative;
@@ -21,7 +23,7 @@ header {
 
     #top {
         width: 100%;
-        display: flex;
+        @include flex-center;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
