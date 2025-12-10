@@ -1,16 +1,20 @@
 @use '../../constants/variables' as *;
 @use '../../mixins/functions' as *;
+@use '../../mixins/responsive' as f;
 
 .last-game{
     position: relative;
     @include flex-center;
     top: -100px;
     z-index: 100;
+    width: 100%;
+    padding: $padding;
 
     .container-info{
         position: relative;
         height: 200px;
-        width: $container-sized;
+        max-width: $container-sized;
+        width: 100%;
         background-color: $color-light;
         box-shadow: $box-shadow;
         @include flex-center;

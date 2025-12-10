@@ -9,7 +9,8 @@
     width: 100%;
 
     .container-noticias {
-        width: $container-sized;
+        max-width: $container-sized;
+        width: 100%;
         @include flex; // Coloca los .noticia en línea
         justify-content: space-between;
 
