@@ -421,6 +421,11 @@ footer .container-copyright .container-sized .conatiner-icons a {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
   align-items: stretch;
 }
+@media (max-width: 768px) {
+  .ultima-noticia .noticia {
+    grid-template-columns: 1fr;
+  }
+}
 .ultima-noticia .noticia .noticia-texto {
   display: flex;
   flex-direction: column;
@@ -450,7 +455,7 @@ footer .container-copyright .container-sized .conatiner-icons a {
 }
 .ultima-noticia .noticia .image-block img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -622,6 +627,345 @@ footer .container-copyright .container-sized .conatiner-icons a {
 #encuentro .escudo2 .img2 {
   width: 12.5em;
   padding-bottom: 3em;
+}
+
+.noticia-historia {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.noticia-historia .titulo-historia {
+  max-width: 1200px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 2rem;
+}
+.noticia-historia .historia {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  align-items: stretch;
+}
+@media (max-width: 768px) {
+  .noticia-historia .historia {
+    grid-template-columns: 1fr;
+  }
+}
+.noticia-historia .historia .texto-historia {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  padding: 1rem;
+}
+.noticia-historia .historia .texto-historia p {
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+}
+.noticia-historia .historia .texto-historia a.btn {
+  position: relative;
+  padding: 10px;
+  background-color: #D90416;
+  width: min-content;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.noticia-historia .historia .image-historia {
+  width: 100%;
+  height: 100%;
+}
+.noticia-historia .historia .image-historia img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.mejores-jugadores {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.mejores-jugadores h2 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.2rem;
+  color: #D90416;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+}
+
+/* GRID */
+.jugadores-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 1rem;
+}
+@media (max-width: 1000px) {
+  .jugadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .jugadores-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARTA */
+.player-card {
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.player-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 18px 6px rgba(0, 0, 0, 0.3);
+}
+.player-card__top {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.player-card__top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 70%);
+}
+.player-card__body {
+  padding: 20px;
+  text-align: center;
+  font-family: "Solway", serif;
+}
+.player-card__avatar {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #D90416;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+.player-card__name {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+.player-card__role {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+.player-card {
+  /* Lista de estadísticas */
+}
+.player-card__stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+.player-card__stats li {
+  background: #D90416;
+  padding: 0.6rem;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9rem;
+}
+.player-card__stats li span {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+.player-card__stats li strong {
+  font-size: 1rem;
+}
+
+.clasificacion {
+  margin: 4rem auto 4rem;
+  text-align: center;
+}
+.clasificacion h2 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 2.5rem;
+  color: #D90416;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.05em;
+}
+
+.tabla-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: auto;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-liga {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  overflow: hidden;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.15rem;
+}
+.tabla-liga .g {
+  color: #1e7f43;
+  font-weight: bold;
+}
+.tabla-liga .e {
+  color: #c9a200;
+  font-weight: bold;
+}
+.tabla-liga .p {
+  color: #8b0000;
+  font-weight: bold;
+}
+.tabla-liga th.g,
+.tabla-liga th.e,
+.tabla-liga th.p {
+  color: white;
+}
+.tabla-liga thead {
+  background: #D90416;
+  color: white;
+}
+.tabla-liga thead th {
+  padding: 1.4rem 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+.tabla-liga thead .pts {
+  font-size: 1.3rem;
+}
+.tabla-liga tbody tr {
+  height: 72px;
+  transition: background-color 0.2s ease;
+}
+.tabla-liga tbody tr:hover {
+  background-color: rgba(217, 4, 22, 0.1);
+}
+.tabla-liga tbody td {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tabla-liga tbody td:nth-child(2) {
+  text-align: left;
+  padding-left: 2rem;
+}
+.tabla-liga tbody .pts {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #D90416;
+}
+
+.lider {
+  background: rgba(217, 4, 22, 0.18);
+  font-weight: bold;
+}
+
+.estadisticas-rapidas {
+  max-width: 1200px;
+  margin: 4rem auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .estadisticas-rapidas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .estadisticas-rapidas {
+    grid-template-columns: 1fr;
+  }
+}
+.estadisticas-rapidas article {
+  background: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+.estadisticas-rapidas article h3 {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.6rem;
+}
+.estadisticas-rapidas article p {
+  font-size: 2rem;
+  color: #D90416;
+  font-weight: bold;
+}
+
+.hero-jugador {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 4rem auto 4rem;
+}
+.hero-jugador .hero-main {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+.hero-jugador .hero-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-jugador .hero-main .panel-inferior {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  font-family: "Solway", serif;
+  text-align: left;
+}
+.hero-jugador .hero-main .panel-inferior h2 {
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 0.5rem;
+}
+.hero-jugador .hero-main .novedades {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #D90416;
+  color: white;
+  padding: 10px 20px;
+  font-family: "Lexend Deca", sans-serif;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+.hero-jugador .hero-main .novedades h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.hero-jugador .hero-main .novedades ul {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.85rem;
 }
 
 /*# sourceMappingURL=main.css.map */

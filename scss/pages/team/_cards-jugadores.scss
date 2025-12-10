@@ -1,0 +1,124 @@
+@use '../../constants/variables' as *;
+@use '../../mixins/buttons' as *;
+@use '../../mixins/functions' as *;
+
+.mejores-jugadores {
+    padding: $section-padding;
+    text-align: center;
+
+    h2 {
+        font-family: $font-title;
+        font-size: 2.2rem;
+        color: $color-primary;
+        margin-bottom: 2rem;
+        text-shadow: $text-shadow;
+    }
+}
+
+/* GRID */
+.jugadores-grid {
+    max-width: $container-sized;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+    padding: 1rem;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARTA */
+.player-card {
+    background: $color-light;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 18px 6px rgba($color-dark, .3);
+    }
+
+    // PARTE SUPERIOR (foto + overlay)
+    &__top {
+        height: 140px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba($color-dark, .4),
+                    transparent 70%);
+        }
+    }
+
+    // CONTENIDO
+    &__body {
+        padding: $padding;
+        text-align: center;
+        font-family: $font-text;
+    }
+
+    &__avatar {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid $color-primary;
+        box-shadow: $box-shadow;
+        background: $color-light;
+    }
+
+    &__name {
+        font-family: $font-title;
+        font-size: 1.4rem;
+        margin-top: .5rem;
+    }
+
+    &__role {
+        font-size: 1rem;
+        color: $color-text;
+        margin-bottom: 1rem;
+    }
+
+    /* Lista de estadísticas */
+    &__stats {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .6rem;
+        padding: 0;
+        margin: 0;
+
+        li {
+            background: $color-primary;
+            padding: .6rem;
+            color: $color-light;
+            text-shadow: $text-shadow;
+            font-family: $font-title;
+            font-size: .9rem;
+
+            span {
+                display: block;
+                font-size: .75rem;
+                opacity: .9;
+            }
+
+            strong {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -19,3 +19,10 @@
 
 // TEAM
 @use 'pages/team/encuentro' ;
+@use 'pages/team/historia';
+@use 'pages/team/cards-jugadores';
+
+// RESULTS
+@use 'pages/results/tabla-resultados';
+@use 'pages/results/estadisticas';
+@use 'pages/results/new-player';

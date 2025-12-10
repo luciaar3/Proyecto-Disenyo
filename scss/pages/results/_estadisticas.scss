@@ -1,0 +1,39 @@
+@use '../../constants/variables' as *;
+@use '../../mixins/buttons' as *;
+@use '../../mixins/functions' as *;
+
+.estadisticas-rapidas {
+  max-width: $container-sized;
+  margin: 4rem auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap;
+  text-align: center;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    background: $color-light;
+    box-shadow: $box-shadow;
+    padding: 2rem 1rem;
+    font-family: $font-title;
+
+    h3 {
+      font-size: 1rem;
+      color: $color-text;
+      margin-bottom: .6rem;
+    }
+
+    p {
+      font-size: 2rem;
+      color: $color-primary;
+      font-weight: bold;
+    }
+  }
+}
