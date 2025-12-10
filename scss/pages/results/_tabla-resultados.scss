@@ -1,0 +1,96 @@
+@use '../../constants/variables' as *;
+@use '../../mixins/buttons' as *;
+@use '../../mixins/functions' as *;
+
+.clasificacion {
+  padding: $section-padding;
+  text-align: center;
+
+  h2 {
+    font-family: $font-title;
+    font-size: 2.6rem;
+    margin-bottom: 2.5rem;
+    color: $color-primary;
+    text-shadow: $text-shadow;
+    letter-spacing: .05em;
+  }
+}
+
+.tabla-wrapper {
+  max-width: $container-sized;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.tabla-liga {
+  width: 100%;
+  border-collapse: collapse;
+  background: $color-light;
+  box-shadow: $box-shadow;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: $font-title;
+  font-size: 1.15rem;
+
+  .g {
+    color: $color-win; // verde victoria
+    font-weight: bold;
+  }
+
+  .e {
+    color: $color-emp; // amarillo empate
+    font-weight: bold;
+  }
+
+  .p {
+    color: $color-loose; // rojo derrota
+    font-weight: bold;
+  }
+
+  thead {
+    background: $color-primary;
+    color: $color-light;
+
+    th {
+      padding: 1.4rem 1rem;
+      font-size: 1.1rem;
+      letter-spacing: .08em;
+    }
+
+    .pts {
+      font-size: 1.3rem;
+    }
+  }
+
+  tbody {
+    tr {
+      height: 72px;
+      transition: background .2s ease;
+
+      &:hover {
+        background: rgba($color-primary, .1);
+      }
+    }
+
+    td {
+      text-align: center;
+      border-bottom: 1px solid rgba($color-dark, .1);
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+      padding-left: 2rem;
+    }
+
+    .pts {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $color-primary;
+    }
+  }
+}
+
+.lider {
+  background: rgba($color-primary, .18);
+  font-weight: bold;
+}
