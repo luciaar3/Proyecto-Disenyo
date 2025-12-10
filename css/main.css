@@ -1,0 +1,627 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/lexend_deca/static/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Solway";
+  src: url("../../assets/fonts/solway/Solway-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Solway";
+  src: url("../../assets/fonts/solway/Solway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Solway";
+  src: url("../../assets/fonts/solway/Solway-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Solway";
+  src: url("../../assets/fonts/solway/Solway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Solway";
+  src: url("../../assets/fonts/solway/Solway-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Solway", serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0px;
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+  border-color: #D90416;
+  border-width: 2px;
+  border-style: solid;
+}
+
+header {
+  position: relative;
+  background-image: url("../../assets/imgs/home-estadio-fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+header .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  clip-path: polygon(0% 0, 60% 0, 40% 100%, 0 100%);
+}
+header #top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header #top > nav,
+header #top > h2 {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-weight: 200;
+}
+header #top .below {
+  flex: 0 0 100%;
+  margin-top: 8px;
+  text-align: center;
+}
+header #top nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0 0 0 1.5em;
+  padding: 0;
+}
+header #top nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  z-index: 3;
+}
+header #top h2 {
+  position: relative;
+  color: white;
+  font-size: 3em;
+  z-index: 3;
+}
+header .container-banner-title {
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -50%);
+  z-index: 100;
+}
+header .container-banner-title h3 {
+  position: relative;
+  font-size: 5em;
+  color: white;
+  margin-left: 10%;
+  margin-bottom: 0.25em;
+  width: 100%;
+}
+header .container-banner-title h4 {
+  position: relative;
+  font-size: 2.5em;
+  color: white;
+  margin-top: 0;
+  margin-left: 10%;
+  font-weight: 300;
+}
+header .container-banner-title span.shadow {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+}
+header .container-banner-title span.shadow span.text-red {
+  color: #D90416;
+}
+
+/* ============================
+      📱 RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  header {
+    height: 100vh;
+    background-position: center;
+  }
+  header .overlay {
+    clip-path: none;
+  }
+  #top {
+    text-align: center;
+  }
+  #top nav ul {
+    gap: 1.5rem;
+    margin-left: 0;
+  }
+  #top h2 {
+    font-size: 1.6em;
+  }
+  #top nav a {
+    font-size: 1em;
+  }
+  h3 {
+    margin-top: 3em;
+    font-size: 2em;
+    margin-left: 0;
+    text-align: center;
+  }
+  h4 {
+    font-size: 1.3em;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-height: 600px;
+}
+footer .row {
+  display: flex;
+  width: 100%;
+}
+footer .row .container-relative-info {
+  background-image: url("../../assets/imgs/prism.png");
+  background-position: center center;
+  background-repeat: repeat;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 66.6666667%;
+}
+footer .row .container-relative-info .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .row .container-relative-info .contact-form form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .row .container-relative-info .contact-form form input[type=email],
+footer .row .container-relative-info .contact-form form textarea {
+  font-size: 1rem;
+  border: 0;
+  padding-left: 5px;
+}
+footer .row .container-relative-info .contact-form form input[type=email] {
+  height: 50px;
+}
+footer .row .container-relative-info .contact-form form textarea {
+  padding-top: 5px;
+  height: 8rem;
+}
+footer .row .container-relative-info .contact-form form input[type=submit] {
+  position: relative;
+  padding: 10px;
+  background-color: #D90416;
+  width: min-content;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+footer .row .container-relative-info .conatiner-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+footer .row .container-relative-info .title,
+footer .row .container-relative-info p {
+  color: white;
+}
+footer .row .container-relative-info a {
+  color: white;
+  text-decoration: none;
+}
+footer .row .conatiner-contact-us {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/imgs/img-footer.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33.333333%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .row .conatiner-contact-us .container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  gap: 5px;
+}
+footer .row .conatiner-contact-us .container-title h4 {
+  font-size: 1.75rem;
+}
+footer .row .conatiner-contact-us .container-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+footer .row .conatiner-contact-us .container-info .row {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+}
+footer .container-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: min-content;
+  padding: 5px 20px;
+}
+footer .container-copyright .container-sized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+footer .container-copyright .container-sized .copyright {
+  color: white;
+  height: 100%;
+  width: 66.666667%;
+  max-width: 1200px;
+}
+footer .container-copyright .container-sized .conatiner-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 33.333333%;
+}
+footer .container-copyright .container-sized .conatiner-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ultima-noticia {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.ultima-noticia .ultima-noticia-titulo {
+  max-width: 1200px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 2rem;
+}
+.ultima-noticia .noticia {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  align-items: stretch;
+}
+.ultima-noticia .noticia .noticia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  padding: 1rem;
+}
+.ultima-noticia .noticia .noticia-texto p {
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+}
+.ultima-noticia .noticia .noticia-texto a.btn {
+  position: relative;
+  padding: 10px;
+  background-color: #D90416;
+  width: min-content;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ultima-noticia .noticia .image-block {
+  width: 100%;
+  height: 100%;
+}
+.ultima-noticia .noticia .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-medio {
+  position: relative;
+  width: 100%;
+  height: 63vh;
+  background-image: url("../../../assets/imgs/banner-medio.jpg");
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.banner-medio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.banner-medio .banner-medio-texto {
+  position: relative;
+  font-family: "Arimo Hebrew Subset Italic", sans-serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: white;
+  padding: 1rem 2rem;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.last-game {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -100px;
+  z-index: 100;
+}
+.last-game .container-info {
+  position: relative;
+  height: 200px;
+  width: 1200px;
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.last-game .container-info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.last-game .container-info .container-teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  height: 100px;
+}
+.last-game .container-info .container-teams h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+.last-game .container-info .container-teams img {
+  height: 100%;
+}
+.last-game .container-info .container-teams .container-result {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.last-game .container-info .container-teams .container-result div {
+  width: 100px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.75rem;
+  font-weight: 800;
+  font-family: "Lexend Deca", sans-serif;
+}
+.last-game .container-info .container-teams .container-result .result-loser {
+  background-color: #D90416;
+  color: black;
+}
+.last-game .container-info .container-teams .container-result .result-winner {
+  background-color: black;
+  color: #D90416;
+}
+
+#noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  padding-top: 0;
+  height: auto;
+  width: 100%;
+}
+#noticias .container-noticias {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+#noticias .container-noticias .noticia {
+  width: 30%;
+  height: 500px;
+  background: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+#noticias .container-noticias .noticia img {
+  height: 50%;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+#noticias .container-noticias .noticia .info {
+  height: 50%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#noticias .container-noticias .noticia .info span {
+  color: #D90416;
+  font-weight: 700;
+  font-size: 1rem;
+}
+#noticias .container-noticias .noticia .info h4 {
+  font-size: 2rem;
+}
+#noticias .container-noticias .noticia .info p {
+  color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+#encuentro {
+  display: flex;
+  height: 600px;
+  background-image: url("../../../assets/imgs/prism.png");
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#encuentro #info {
+  color: white;
+  font-size: 1.8em;
+}
+#encuentro .escudo1 {
+  margin: 3em;
+}
+#encuentro .escudo1 .img1 {
+  width: 15em;
+}
+#encuentro .escudo2 {
+  margin: 5em;
+}
+#encuentro .escudo2 .img2 {
+  width: 12.5em;
+  padding-bottom: 3em;
+}
+
+/*# sourceMappingURL=main.css.map */

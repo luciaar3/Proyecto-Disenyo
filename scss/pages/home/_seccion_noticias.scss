@@ -1,0 +1,56 @@
+@use '../../constants/variables' as *;
+@use '../../mixins/functions' as *;
+
+#noticias {
+    @include flex-center;
+    padding: $section-padding;
+    padding-top: 0;
+    height: auto;
+    width: 100%;
+
+    .container-noticias {
+        width: $container-sized;
+        @include flex; // Coloca los .noticia en línea
+        justify-content: space-between;
+
+        .noticia {
+            width: 30%; // Para que entren tres por fila
+            height: 500px;
+            background: $color-light;
+            box-shadow: $box-shadow;
+
+            img {
+                height: 50%;
+                width: 100%;
+                object-fit: fill;
+                object-position: center;
+            }
+
+            .info {
+                height: 50%;
+                width: 100%;
+                padding: $padding;
+                @include flex;
+                flex-direction: column;
+                gap: 15px;
+
+                span {
+                    color: $color-primary;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+
+                h4 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    color: $color-text;
+                    overflow: hidden;
+                    font-size: 1rem;
+                }
+
+            }
+        }
+    }
+}
