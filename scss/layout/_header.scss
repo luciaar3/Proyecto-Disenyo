@@ -94,7 +94,7 @@ header {
 
         span.shadow {
             text-shadow: vars.$text-shadow;
-
+            font-family: vars.$font-title;
             span.text-red {
                 color: vars.$color-primary;
             }

@@ -1,27 +1,86 @@
+@use '../../constants/variables' as vars;
+@use '../../mixins/functions' as f;
+
 #encuentro {
-    display: flex;
+    @include f.flex-center;
+    flex-direction: column;
+    gap: 10%;
     height: 600px;
     background-image: url("../../../assets/imgs/prism.png");
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 
-    #info {
-        color: white;
-        font-size: 1.8em;
+    h2 {
+        color: vars.$color-light;
+        font-size: 3rem;
     }
 
-    .escudo1 {
-        margin: 3em;
-        .img1{
-            width: 15em;
+    .content {
+        @include f.flex-center;
+        height: min-content;
+        height: 300px;
+        width: vars.$container-sized;
+
+        #info {
+            color: white;
+            font-size: 1.8em;
+
+            .result {
+                @include f.flex-center;
+                gap: 10px;
+                font-size: 2rem;
+                height: 20px;
+                margin-bottom: 25px;
+
+                .line {
+                    background-color: vars.$color-light;
+                    width: 50px;
+                    height: 5px;
+                }
+
+                span {
+                    height: fit-content;
+                }
+
+            }
+
+            .text-info {
+
+                @include f.flex-center;
+                flex-direction: column;
+
+                p {
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.25rem;
+                    color: vars.$color-primary;
+                    font-weight: 700;
+                    width: 100%;
+                    text-align: center
+                }
+
+            }
+
         }
-    }
-    .escudo2 {
-        margin: 5em;
-        .img2 {
-            width: 12.5em;
-            padding-bottom:3em ;
+
+        .escudo1 {
+            @include f.flex-center;
+            height: 100%;
+            width: 30%;
+
+            .img1 {
+                height: 100%;
+            }
+        }
+
+        .escudo2 {
+            @include f.flex-center;
+            height: 100%;
+            width: 30%;
+
+            .img2 {
+                height: 100%;
+            }
         }
     }
 }

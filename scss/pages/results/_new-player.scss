@@ -41,7 +41,7 @@
             left: 1rem;
             background: $color-primary;
             color: $color-light;
-            padding: $padding/2 $padding;
+            padding: calc($padding / 2) $padding;
             font-family: $font-title;
             box-shadow: $box-shadow;
 

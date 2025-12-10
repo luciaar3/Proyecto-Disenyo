@@ -111,6 +111,15 @@ footer {
                     @include flex;
                     gap: $gap;
                     width: 80%;
+
+                    p{
+                        @include flex-align-center;
+                    }
+
+                }
+
+                a > img:hover{
+                    background-color: $color-primary;
                 }
             }
         }
@@ -143,6 +152,11 @@ footer {
 
                 a {
                     @include flex-center;
+
+                    img:hover{
+                        transform: scale(1.05);
+                        transition: .25s;
+                    }
                 }
             }
         }
