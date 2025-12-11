@@ -204,7 +204,7 @@ header #top nav a {
 }
 header #top h2 {
   position: relative;
-  color: var(--color-light);
+  color: white;
   font-size: 3em;
   z-index: 3;
 }
@@ -300,6 +300,9 @@ footer .row .container-relative-info .contact-form {
   flex-direction: column;
   gap: 15px;
 }
+footer .row .container-relative-info .contact-form p {
+  color: white;
+}
 footer .row .container-relative-info .contact-form form {
   display: flex;
   justify-content: center;
@@ -330,6 +333,7 @@ footer .row .container-relative-info .contact-form form input[type=submit] {
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
+  color: white;
 }
 footer .row .container-relative-info .conatiner-links {
   display: flex;
@@ -340,10 +344,12 @@ footer .row .container-relative-info .conatiner-links {
 footer .row .container-relative-info .title,
 footer .row .container-relative-info p {
   color: var(--color-light);
+  color: white;
 }
 footer .row .container-relative-info a {
   color: var(--color-light);
   text-decoration: none;
+  color: white;
 }
 footer .row .conatiner-contact-us {
   background-image: linear-gradient(rgba(var(--color-dark-rgb), 0.5), rgba(var(--color-dark-rgb), 0.5)), url("../../assets/imgs/img-footer.png");
@@ -396,7 +402,7 @@ footer .container-copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-dark);
+  background-color: #252529;
   width: 100%;
   height: min-content;
   padding: 5px 20px;
@@ -709,7 +715,7 @@ footer .container-copyright .container-sized .conatiner-icons a img:hover {
   background-image: url("../../../assets/imgs/prism.png");
 }
 #encuentro h2 {
-  color: var(--color-light);
+  color: white;
   font-size: 3rem;
 }
 @media (max-width: 750px) {
@@ -767,13 +773,13 @@ footer .container-copyright .container-sized .conatiner-icons a img:hover {
   margin-bottom: 25px;
 }
 #encuentro .content #info .result .line {
-  background-color: var(--color-light);
+  background-color: white;
   width: 50px;
   height: 5px;
 }
 #encuentro .content #info .result span {
   height: fit-content;
-  color: var(--color-light);
+  color: white;
 }
 #encuentro .content #info .text-info {
   display: flex;
@@ -783,7 +789,7 @@ footer .container-copyright .container-sized .conatiner-icons a img:hover {
 }
 #encuentro .content #info .text-info p {
   font-size: 1.5rem;
-  color: var(--color-light);
+  color: white;
 }
 #encuentro .content #info .text-info span {
   font-size: 1.25rem;
@@ -1207,7 +1213,7 @@ footer .container-copyright .container-sized .conatiner-icons a img:hover {
 .hero-jugador .hero-main .novedades h3 {
   margin-bottom: 0.3rem;
   font-size: 1rem;
-  color: var(--color-light);
+  color: white;
 }
 .hero-jugador .hero-main .novedades ul {
   margin: 0;
@@ -1215,7 +1221,7 @@ footer .container-copyright .container-sized .conatiner-icons a img:hover {
   font-size: 0.85rem;
 }
 .hero-jugador .hero-main .novedades ul li {
-  color: var(--color-light);
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

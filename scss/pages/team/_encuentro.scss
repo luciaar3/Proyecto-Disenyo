@@ -8,7 +8,7 @@
     background-image: url("../../../assets/imgs/prism.png");
 
     h2 {
-        color: var(--color-light);
+        color: vars.$color-light;
         font-size: 3rem;
     }
 
@@ -70,14 +70,15 @@
                 margin-bottom: 25px;
 
                 .line {
-                    background-color: var(--color-light);
+                    background-color: vars.$color-light;
+
                     width: 50px;
                     height: 5px;
                 }
 
                 span {
                     height: fit-content;
-                    color: var(--color-light);
+                    color: vars.$color-light
                 }
 
             }
@@ -88,7 +89,7 @@
 
                 p {
                     font-size: 1.5rem;
-                    color: var(--color-light);
+                    color: vars.$color-light
                 }
 
                 span {

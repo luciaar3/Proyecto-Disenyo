@@ -26,7 +26,9 @@ footer {
             .contact-form {
                 @include flex-column;
                 gap: 15px;
-
+                p{
+                    color:$color-light;
+                }
                 form {
                     @include flex-justify-center;
                     flex-direction: column;
@@ -50,6 +52,7 @@ footer {
 
                     input[type="submit"] {
                         @include primary-button;
+                        color: $color-light;
                     }
                 }
 
@@ -64,10 +67,13 @@ footer {
             .title,
             p {
                 @include text-light;
+                color:$color-light;
             }
 
             a {
                 @include link;
+                color:$color-light;
+
             }
         }
 
@@ -109,7 +115,7 @@ footer {
 
                     p{
                         @include flex-align-center;
-                        color: var(--color-light);
+                        color: var(--color-light); 
                     }
 
                 }
@@ -119,12 +125,11 @@ footer {
                 }
             }
         }
-
     }
 
     .container-copyright {
         @include flex-center;
-        background-color: var(--color-dark);
+        background-color: $color-dark;
         width: 100%;
         height: min-content;
         padding: 5px 20px;
