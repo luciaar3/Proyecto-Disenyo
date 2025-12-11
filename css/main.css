@@ -93,7 +93,7 @@
 :root {
   --color-primary: #D90416;
   --color-light: white;
-  --color-dark: black;
+  --color-dark: #e1ee30;
   --color-light-rgb: 255, 255, 255;
   --color-dark-rgb: 0, 0, 0;
 }
@@ -140,7 +140,7 @@ hr {
 }
 
 body:has(#theme-toggle:checked) {
-  --color-light: black;
+  --color-light: #e1ee30;
   --color-dark: white;
   --color-light-rgb: 0, 0, 0;
   --color-dark-rgb: 255, 255, 255;
