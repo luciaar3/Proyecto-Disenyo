@@ -239,9 +239,6 @@ header .container-banner-title span.shadow span.text-red {
   color: #D90416;
 }
 
-/* ============================
-      📱 RESPONSIVE
-============================ */
 @media (max-width: 768px) {
   header {
     height: 100vh;
@@ -432,6 +429,67 @@ footer .container-copyright .container-sized .conatiner-icons a {
 footer .container-copyright .container-sized .conatiner-icons a img:hover {
   transform: scale(1.05);
   transition: 0.25s;
+}
+@media (max-width: 768px) {
+  footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .row .container-relative-info,
+  footer .row .conatiner-contact-us {
+    width: 100%;
+  }
+  footer .row .container-relative-info {
+    gap: 5%;
+    padding: 10px;
+  }
+  footer .row .container-relative-info .contact-form {
+    width: 100%;
+  }
+  footer .row .container-relative-info .contact-form form {
+    width: 100%;
+  }
+  footer .row .container-relative-info .contact-form form input[type=email],
+  footer .row .container-relative-info .contact-form form textarea {
+    width: 100%;
+  }
+  footer .row .container-relative-info .contact-form form input[type=submit] {
+    width: 100%;
+  }
+  footer .row .container-relative-info .conatiner-links {
+    width: 100%;
+    gap: 10px;
+  }
+  footer .row .conatiner-contact-us {
+    gap: 15px;
+  }
+  footer .row .conatiner-contact-us .container-title h4 {
+    font-size: 1.5rem;
+  }
+  footer .row .conatiner-contact-us .container-info .row {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .row .conatiner-contact-us .container-info .row p {
+    text-align: center;
+  }
+  footer .container-copyright {
+    flex-direction: column;
+    padding: 10px;
+  }
+  footer .container-copyright .container-sized {
+    flex-direction: column;
+  }
+  footer .container-copyright .container-sized .copyright,
+  footer .container-copyright .container-sized .conatiner-icons {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  footer .container-copyright .container-sized .conatiner-icons a {
+    margin: 0 5px;
+  }
 }
 
 .ultima-noticia {
