@@ -30,8 +30,7 @@
                 height: 50%;
                 width: 100%;
                 padding: $padding;
-                @include flex;
-                flex-direction: column;
+                @include flex-column;
                 gap: 15px;
 
                 span {

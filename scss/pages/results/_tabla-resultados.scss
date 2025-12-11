@@ -65,3 +65,28 @@
         }
     }
 }
+//responsive
+@media (max-width: 768px) {
+    .tabla-liga {
+        font-size: 0.95rem;
+
+        & > div {
+            padding: 0.6rem 0.8rem; // menos padding para filas
+        }
+
+        .hearding span {
+            font-size: 1rem; // título un poco más pequeño
+        }
+    }
+}
+
+@media (max-width: 400px) { //convierte cada fila en un mini bloque vertical
+    .tabla-liga {
+        display: block; // cada fila se apila
+        & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+    }
+}
