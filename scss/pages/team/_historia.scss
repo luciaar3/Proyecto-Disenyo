@@ -14,7 +14,7 @@
         font-family: $font-title;
         font-size: 2rem;
         font-weight: 600;
-        color: $color-dark;
+        color: var(--color-dark);
         margin-bottom: 2rem;
     }
 
@@ -22,7 +22,7 @@
         max-width: $container-sized;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: $color-light;
+        background-color: var(--color-light);
         box-shadow: $box-shadow;
         align-items: stretch;
         @media (max-width: 768px) {

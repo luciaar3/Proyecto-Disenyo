@@ -17,3 +17,7 @@
     @include flex-justify-center;
     align-items: center;
 }
+
+@function rgba-color($color, $opacidad) {
+    @return rgba($color, $opacidad);
+}

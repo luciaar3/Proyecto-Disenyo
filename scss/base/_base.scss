@@ -1,10 +1,19 @@
 @use '../constants/variables' as *;
 
+:root{
+    --color-primary: #{$color-primary};
+    --color-light: #{$color-light};
+    --color-dark: #{$color-dark};
+    --color-light-rgb: #{$color-light-rgb};
+    --color-dark-rgb: #{$color-dark-rgb};
+}
+
 * {
     box-sizing: border-box;
     font-family: $font-text;
     margin: 0;
     padding: 0;
+    color: var(--color-dark);
 }
 
 html,
@@ -18,7 +27,7 @@ body {
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-    background-color: $color-light;
+    background-color: var(--color-light);
 }
 
 h1,
@@ -29,6 +38,7 @@ h5,
 h6 {
     font-family: $font-title;
     margin: 0px;
+    color: var(--color-dark);
 }
 
 hr {

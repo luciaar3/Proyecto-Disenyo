@@ -98,6 +98,7 @@ footer {
 
                 h4 {
                     font-size: 1.75rem;
+                    color: var(--color-light);
                 }
             }
 
@@ -114,6 +115,7 @@ footer {
 
                     p{
                         @include flex-align-center;
+                        color: var(--color-light);
                     }
 
                 }
@@ -128,7 +130,7 @@ footer {
 
     .container-copyright {
         @include flex-center;
-        background-color: $color-dark;
+        background-color: var(--color-dark);
         width: 100%;
         height: min-content;
         padding: 5px 20px;

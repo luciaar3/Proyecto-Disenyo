@@ -19,7 +19,7 @@
   }
 
   article {
-    background: $color-light;
+    background: var(--color-light);
     box-shadow: $box-shadow;
     padding: 2rem 1rem;
     font-family: $font-title;

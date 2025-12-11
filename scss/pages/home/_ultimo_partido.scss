@@ -11,7 +11,7 @@
         position: relative;
         height: 200px;
         width: $container-sized;
-        background-color: $color-light;
+        background-color: var(--color-light);
         box-shadow: $box-shadow;
         @include flex-center;
         flex-direction: column;
@@ -53,11 +53,11 @@
 
                 .result-loser{
                     background-color: $color-primary;
-                    color: $color-dark;
+                    color: var(--color-dark);
                 }
 
                 .result-winner{
-                    background-color: $color-dark;
+                    background-color: var(--color-dark);
                     color: $color-primary;
                 }
             }

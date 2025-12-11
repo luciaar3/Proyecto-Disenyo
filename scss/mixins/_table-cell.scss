@@ -1,0 +1,38 @@
+@use '../constants/variables' as *;
+@use '../mixins/functions' as f;
+
+@mixin table-cell(){
+
+    @include f.flex;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+    span {
+        padding: 1.4rem 1rem;
+        font-size: 1rem;
+        letter-spacing: .08em;
+        padding: $padding;
+        display: block;
+    }
+
+    & span:nth-child(1),
+    & span:nth-child(3),
+    & span:nth-child(4),
+    & span:nth-child(5),
+    & span:nth-child(6){
+        width: 10%;
+    }
+
+    & span:nth-child(2){
+        width: 35%;
+    }
+
+    & span:nth-child(7){
+        width: 15%;
+    }
+
+    &:hover{
+        background-color: f.rgba-color($color-primary, .1);
+    }
+
+}

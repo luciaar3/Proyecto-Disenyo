@@ -1,3 +1,5 @@
+@use '../mixins/functions' as f;
+
 $container-sized: 1200px;
 
 $font-title: 'Lexend Deca', sans-serif;
@@ -7,15 +9,17 @@ $font-hero: 'Arimo Hebrew Subset Italic', sans-serif;
 $color-primary: #D90416;
 $color-dark: black;
 $color-light: white;
+$color-dark-rgb: 0, 0, 0;
+$color-light-rgb: 255, 255, 255;
 $color-win: #1e7f43;
 $color-emp: #c9a200;
 $color-loose: #8b0000;
-$color-semitransparente: rgba(0, 0, 0, .5);
-$color-text: rgba($color: $color-dark, $alpha: .6);
+$color-semitransparente: f.rgba-color(var(--color-dark-rgb), .5);
+$color-text: rgba($color: var(--color-dark-rgb), $alpha: .6);
 
 $padding: 20px;
 $gap: 20px;
 $section-padding: 4rem 2rem;
 
-$box-shadow: 0 0 10px 4px rgba($color-dark, .2);
-$text-shadow: 0 0 5px rgba($color: $color-light, $alpha: .25);
+$box-shadow: 0 0 10px 4px f.rgba-color(var(--color-dark-rgb), .2);
+$text-shadow: 0 0 5px f.rgba-color(var(--color-light-rgb), .25);

@@ -16,7 +16,7 @@
         .noticia {
             width: 30%; // Para que entren tres por fila
             height: 500px;
-            background: $color-light;
+            background: var(--color-light);
             box-shadow: $box-shadow;
 
             img {
