@@ -12,6 +12,25 @@
         font-size: 3rem;
     }
 
+    //responsive
+    @media (max-width: 750px) {
+        .content {
+            flex-direction: column; //escudos arriba y abajo
+            width: 100%;
+            height: auto;
+
+            .escudo1, .escudo2 {
+            width: 50%;
+            height: auto;
+            margin-bottom: 1rem;
+            }
+            #info {
+                width: 100%;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
     .content {
         @include f.flex-center;
         height: min-content;
@@ -19,8 +38,29 @@
         width: vars.$container-sized;
 
         #info {
-            color: white;
+            color: vars.$color-light;
             font-size: 1.8em;
+
+            ///responsive
+            @media (max-width: 550px) {
+                .result {
+                    flex-direction: column;
+                    gap: 5px;
+                    font-size: 1.5rem;
+
+                    .line {
+                        width: 40px;
+                        height: 4px;
+                    }
+                }
+                .text-info p {
+                    font-size: 1.1rem;
+                }
+
+                .text-info span {
+                    font-size: 1rem;
+                }
+            }
 
             .result {
                 @include f.flex-center;
@@ -81,6 +121,20 @@
             .img2 {
                 height: 100%;
             }
+        }
+    }
+}
+
+//responsive general
+@media (max-width: 900px) {
+    #encuentro {
+        height: auto; //la seccion crece si lo necesita
+        gap: 5%; //menos espacio vertical
+        padding: 2rem 1rem; //un poco mas de espacio entre elementos
+    
+
+        h2 {
+            font-size: 2.2rem; //titulo más pequeño
         }
     }
 }

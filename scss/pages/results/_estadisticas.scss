@@ -3,19 +3,20 @@
 @use '../../mixins/functions' as *;
 
 .estadisticas-rapidas {
-  max-width: $container-sized;
+  max-width: $container-sized; //max de 1200px
   margin: 4rem auto 4rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); //cuatro columnas iniciales
   gap: $gap;
   text-align: center;
 
+  //responsive
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); //pasamos a dos columnas
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; //o una
   }
 
   article {
