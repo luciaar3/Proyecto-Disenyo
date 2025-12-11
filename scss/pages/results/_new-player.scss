@@ -5,28 +5,53 @@
 .hero-jugador {
     display: flex;
     gap: $gap;
-    max-width: $container-sized;
+    max-width: $container-sized; //ancho maximo de 1200px
     margin: 4rem auto 4rem;
+    //responsive
+    @media (max-width: 750px) {
+        flex-direction: column; //pasa a ser columna
+        gap: 1.5rem; //menos espacio entre elementos
+        margin: 2rem auto; //y menos margen arriba y abajo
+    }
 
     .hero-main {
         position: relative;
-        flex: 1; // ocupa más espacio
-        overflow: hidden;
+        flex: 1; // ocupe más espacio
+        overflow: hidden; //para que no sobresalga nada
 
         img {
             width: 100%;
             height: auto;
-            display: block;
+            display: block; //eliminar espacios que no se ven
+            //resposnive
+            @media (max-width: 750px) {
+              height: auto; // altura automatica
+              max-height: 400px; //controlamos que no se vuelva enrome
+              object-fit: cover;
+            }
         }
 
         .panel-inferior {
             position: absolute;
-            bottom: 0;
+            bottom: 0; //pegado bajo
             width: 100%;
-            background: rgba-color(var(--color-dark-rgb), .6);
+            background: rgba-color(var(--color-dark-rgb), .6); //semitransparente
             padding: $padding;
             font-family: $font-text;
             text-align: left;
+
+            //resposive
+            @media (max-width: 750px) {
+                padding: .8rem;
+
+                h2 {
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+            }
 
             h2 {
                 font-family: $font-title;
@@ -46,6 +71,22 @@
             padding: calc($padding / 2) $padding;
             font-family: $font-title;
             box-shadow: $box-shadow;
+
+            //resposive
+            @media (max-width: 750px) {
+                top: .6rem;
+                left: .6rem; //reducimos
+                padding: .4rem .8rem;
+
+                h3 {
+                    font-size: .9rem;
+                }
+
+                ul {
+                    font-size: .75rem;
+                    padding-left: .6rem;
+                }
+            }
 
             h3 {
                 margin-bottom: .3rem;
