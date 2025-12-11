@@ -2,8 +2,7 @@
 @use '../../mixins/functions' as f;
 
 #encuentro {
-    @include f.flex-center;
-    flex-direction: column;
+    @include f.flex-center-column;
     gap: 10%;
     height: 600px;
     background-image: url("../../../assets/imgs/prism.png");
@@ -45,8 +44,7 @@
 
             .text-info {
 
-                @include f.flex-center;
-                flex-direction: column;
+                @include f.flex-center-column;
 
                 p {
                     font-size: 1.5rem;

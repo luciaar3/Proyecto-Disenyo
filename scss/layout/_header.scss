@@ -45,8 +45,7 @@ header {
         }
 
         > div{
-            @include f.flex;
-            flex-direction: row;
+            @include f.flex-row;
             gap: 10px;
         }
 

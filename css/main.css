@@ -378,8 +378,8 @@ footer .row .conatiner-contact-us .container-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   flex-direction: column;
+  gap: 20px;
   width: 100%;
 }
 footer .row .conatiner-contact-us .container-info .row {
